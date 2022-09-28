@@ -1,11 +1,15 @@
+.exercise {
+    border: 1px solid;
+    border-radius: 10px;
+}
+
 .exercise img {
     width: 350px;
     height: 300px;
+    border-radius: 20px;
+    padding: 10px;
 }
 
-@media screen and (max-width:) {
-    .exercise img {
-        width: 250px;
-        height: 200px;
-    }
+.btn {
+    border-radius: 0 0 10px 10px;
 }
