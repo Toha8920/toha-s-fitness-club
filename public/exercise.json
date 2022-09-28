@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "CategoryName": "Dumbbell Lifting",
+        "img": "https://manofmany.com/wp-content/uploads/2020/07/Best-Dumbbell-Exercises-For-Men.jpg",
+        "age": "20-25",
+        "time": "2 m"
+    },
+    {
+        "id": 2,
+        "CategoryName": "Weight Lifting",
+        "img": "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/320/320769/man-and-woman-lifting-weights-to-strength-train-and-build-muscle.jpg?w=1155&h=1541",
+        "age": "20-25",
+        "time": "4 m"
+    },
+    {
+        "id": 3,
+        "CategoryName": "Dumbbell",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWLCpRg_OICdgEKml8CJEAIoGNf3CgxDa5Gg&usqp=CAU",
+        "age": "20-25",
+        "time": "5 m"
+    },
+    {
+        "id": 4,
+        "CategoryName": "Unique Dumbbell ",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM0vcAAE2DWKsKgCyWOsTV759rvGLvqEQuMQ&usqp=CAU",
+        "age": "20-25",
+        "time": "6 m"
+    },
+    {
+        "id": 5,
+        "CategoryName": "Flexibility",
+        "img": "https://dallasvoice.com/wp-content/uploads/2020/01/Hit-the-weights.jpg",
+        "age": "20-25",
+        "time": "7 m"
+    },
+    {
+        "id": 6,
+        "CategoryName": "Fitness",
+        "img": "https://t3.ftcdn.net/jpg/02/75/64/50/360_F_275645014_bHOV5X63gQx0XUxX0H7SycxwoBYCVy9x.jpg",
+        "age": "20-25",
+        "time": "10 m"
+    }
+]

@@ -2,3 +2,22 @@
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
+
+.exercise-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+@media screen and (max-width:1200px) {
+    .fitness-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .exercise-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+}
