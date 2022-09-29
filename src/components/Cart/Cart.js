@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Cart.css'
 
-const Cart = ({ cart }) => {
+const Cart = () => {
+    const [cart, setCart] = useState([10]);
+    const addBreak = (e) => {
+
+        setCart(cart)
+    }
+
     return (
         <div className='cart'>
             <div className='	display: flex'>
@@ -27,17 +33,16 @@ const Cart = ({ cart }) => {
             </div>
             <div className='shadow-lg shadow-indigo-500/40 mt-10'>
                 <h2 className='text-2xl m-2 text-center'>Add A Break</h2>
-                <div className='display: flex justify-center '>
-                    <h2 className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</h2>
-                    <h2 className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</h2>
-                    <h2 className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</h2>
-                    <h2 className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</h2>
+                <div className='display: flex justify-center'>
+                    <button onClick={() => setCart(10)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</button>
+                    <button onClick={() => setCart(20)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>20s</button>
+                    <button onClick={() => setCart(30)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>30s</button>
+                    <button onClick={() => setCart(40)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>40s</button>
                 </div>
             </div>
             <div>
                 <h1 className='text-2xl mt-10'>Exercise Details</h1>
-                <input className='bg-slate-200 h-10 px-2 mt-3' type="text" placeholder='Exercise Time ' />
-                <input className='bg-slate-200 h-10 px-2 mt-3' type="text" placeholder='Break Time' />
+                <p className='bg-slate-200 h-10 px-2 mt-3'>Break Time:  {cart}s</p>
             </div>
             <div>
                 <button className='text-2xl mt-16 bg-rose-500 p-3 rounded-md ml-8'>Activity Completed</button>

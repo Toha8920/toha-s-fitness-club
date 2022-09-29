@@ -6,13 +6,13 @@ import './Exercises.css'
 
 const Exercises = () => {
     const [exercises, setExercises] = useState([]);
-    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         fetch('exercise.json')
             .then(res => res.json())
             .then(data => setExercises(data))
-    }, [])
+    }, []);
+
     return (
 
         <div className='fitness-container'>
@@ -23,7 +23,7 @@ const Exercises = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart></Cart>
             </div>
         </div>
     );
