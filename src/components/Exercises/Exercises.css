@@ -15,7 +15,7 @@
 @media screen and (max-width:1200px) {
     .fitness-container {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .exercise-container {

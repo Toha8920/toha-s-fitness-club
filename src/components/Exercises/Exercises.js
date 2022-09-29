@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToDb } from '../../fakeDb/fakedb';
 import Cart from '../Cart/Cart';
 import Exercise from '../Exercise/Exercise';
 
@@ -6,7 +7,9 @@ import './Exercises.css'
 
 const Exercises = () => {
     const [exercises, setExercises] = useState([]);
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([]);
+
+
 
     useEffect(() => {
         fetch('exercise.json')
@@ -16,8 +19,10 @@ const Exercises = () => {
 
     const handleClick = (exercise) => {
         const newCart = [...cart, exercise];
-        setCart(newCart)
+        setCart(newCart);
+
     };
+
 
     return (
 
@@ -29,7 +34,7 @@ const Exercises = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart} ></Cart>
             </div>
         </div>
     );
