@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Exercise from '../Exercise/Exercise';
 
 import './Exercises.css'
 
 const Exercises = () => {
     const [exercises, setExercises] = useState([]);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         fetch('exercise.json')
@@ -21,7 +23,7 @@ const Exercises = () => {
                 }
             </div>
             <div className="cart-container">
-                <p>I am from cart</p>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
