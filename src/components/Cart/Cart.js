@@ -25,6 +25,23 @@ const Cart = ({ cart }) => {
                     <h3 className='text-1xl m-4 text-slate-600'>Age</h3>
                 </div>
             </div>
+            <div className='shadow-lg shadow-indigo-500/40 mt-10'>
+                <h2 className='text-2xl m-2 text-center'>Add A Break</h2>
+                <div className='display: flex justify-center '>
+                    <h2 className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</h2>
+                    <h2 className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</h2>
+                    <h2 className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</h2>
+                    <h2 className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</h2>
+                </div>
+            </div>
+            <div>
+                <h1 className='text-2xl mt-10'>Exercise Details</h1>
+                <input className='bg-slate-200 h-10 px-2 mt-3' type="text" placeholder='Exercise Time ' />
+                <input className='bg-slate-200 h-10 px-2 mt-3' type="text" placeholder='Break Time' />
+            </div>
+            <div>
+                <button className='text-2xl mt-16 bg-rose-500 p-3 rounded-md ml-8'>Activity Completed</button>
+            </div>
         </div>
     );
 };
