@@ -2,8 +2,10 @@ import React from 'react';
 import './Exercise.css'
 
 const Exercise = (props) => {
-    const { img, CategoryName, age, time } = props.exercise;
-    console.log(props.exercise)
+    const { exercise, handleClick } = props;
+    console.log(props)
+    const { img, CategoryName, age, time } = exercise;
+
     return (
         <div className='exercise'>
             <img src={img} alt="" />
@@ -12,7 +14,7 @@ const Exercise = (props) => {
                 <p>For age: {age}</p>
                 <p>Time required:{time}</p>
             </div>
-            <button className='bg-green-700 w-full btn h-10 text-white border-none'>Add to list</button>
+            <button onClick={() => handleClick(exercise)} className='bg-green-700 w-full btn h-10 text-white border-none'>Add to list</button>
         </div>
     );
 };

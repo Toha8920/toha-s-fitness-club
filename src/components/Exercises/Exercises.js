@@ -6,6 +6,7 @@ import './Exercises.css'
 
 const Exercises = () => {
     const [exercises, setExercises] = useState([]);
+    const [cart, setCart] = useState([])
 
     useEffect(() => {
         fetch('exercise.json')
@@ -13,17 +14,22 @@ const Exercises = () => {
             .then(data => setExercises(data))
     }, []);
 
+    const handleClick = (exercise) => {
+        const newCart = [...cart, exercise];
+        setCart(newCart)
+    };
+
     return (
 
         <div className='fitness-container'>
 
             <div className="exercise-container">
                 {
-                    exercises.map(exercise => <Exercise exercise={exercise} key={exercise.id}></Exercise>)
+                    exercises.map(exercise => <Exercise exercise={exercise} key={exercise.id} handleClick={handleClick}></Exercise>)
                 }
             </div>
             <div className="cart-container">
-                <Cart></Cart>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );

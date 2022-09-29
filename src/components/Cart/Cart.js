@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import './Cart.css'
 
-const Cart = () => {
-    const [cart, setCart] = useState([10]);
-    const addBreak = (e) => {
+const Cart = (props) => {
+    const { cart } = props;
+    let total = 0;
+    for (const exercise of cart) {
+        total = total + parseFloat(exercise.time);
+    }
+    const [carts, setCarts] = useState([10]);
+    const addBreak = () => {
 
-        setCart(cart)
+        setCarts(cart)
     }
 
     return (
@@ -34,15 +39,16 @@ const Cart = () => {
             <div className='shadow-lg shadow-indigo-500/40 mt-10'>
                 <h2 className='text-2xl m-2 text-center'>Add A Break</h2>
                 <div className='display: flex justify-center'>
-                    <button onClick={() => setCart(10)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</button>
-                    <button onClick={() => setCart(20)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>20s</button>
-                    <button onClick={() => setCart(30)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>30s</button>
-                    <button onClick={() => setCart(40)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>40s</button>
+                    <button onClick={() => setCarts(10)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</button>
+                    <button onClick={() => setCarts(20)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>20s</button>
+                    <button onClick={() => setCarts(30)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>30s</button>
+                    <button onClick={() => setCarts(40)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>40s</button>
                 </div>
             </div>
             <div>
                 <h1 className='text-2xl mt-10'>Exercise Details</h1>
-                <p className='bg-slate-200 h-10 px-2 mt-3'>Break Time:  {cart}s</p>
+                <p className='bg-slate-200 h-10 px-2 mt-3'>Exercise Time: {total}min</p>
+                <p className='bg-slate-200 h-10 px-2 mt-3'>Break Time:  {carts}s</p>
             </div>
             <div>
                 <button className='text-2xl mt-16 bg-rose-500 p-3 rounded-md ml-8'>Activity Completed</button>
