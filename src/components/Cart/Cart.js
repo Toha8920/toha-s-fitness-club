@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+// import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 import { addToDb, getData } from '../../fakeDb/fakedb';
 import './Cart.css'
 
@@ -23,7 +26,11 @@ const Cart = (props) => {
     useEffect(() => {
         const storedData = getData();
         setCarts(storedData);
-    }, [])
+    }, []);
+
+    const notify = () => {
+        toast("Hey Toha !! You completed the assignment")
+    };
 
     return (
         <div className='cart'>
@@ -63,7 +70,8 @@ const Cart = (props) => {
                 <p className='bg-slate-200 h-10 px-2 mt-3'>Break Time: {carts}s</p>
             </div>
             <div>
-                <button className='text-2xl mt-16 bg-rose-500 p-3 rounded-md ml-8'>Activity Completed</button>
+                <button onClick={notify} className='text-2xl mt-16 bg-rose-500 p-3 rounded-md ml-8'>Activity Completed</button>
+                <ToastContainer />
             </div>
         </div>
     );
