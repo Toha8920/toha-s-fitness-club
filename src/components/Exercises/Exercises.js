@@ -3,6 +3,7 @@ import { addToDb } from '../../fakeDb/fakedb';
 import Cart from '../Cart/Cart';
 import Exercise from '../Exercise/Exercise';
 
+
 import './Exercises.css'
 
 const Exercises = () => {
