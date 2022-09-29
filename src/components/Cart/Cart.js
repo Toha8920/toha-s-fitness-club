@@ -16,13 +16,13 @@ const Cart = (props) => {
         setCarts(cart)
     }
 
-    const handleCart = (e) => {
-        setCarts(e.target.innerText);
-        addToDb(e.target.innerText)
+    const handleCart = (time) => {
+        setCarts(time);
+        addToDb(time)
     }
     useEffect(() => {
         const storedData = getData();
-        setCarts(JSON.parse(storedData));
+        setCarts(storedData);
     }, [])
 
     return (
@@ -51,16 +51,16 @@ const Cart = (props) => {
             <div className='shadow-lg shadow-indigo-500/40 mt-10'>
                 <h2 className='text-2xl m-2 text-center'>Add A Break</h2>
                 <div className='display: flex justify-center'>
-                    <button onClick={handleCart} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</button>
-                    <button onClick={handleCart} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>20s</button>
-                    <button onClick={handleCart} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>30s</button>
-                    <button onClick={handleCart} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>40s</button>
+                    <button onClick={() => handleCart(10)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>10s</button>
+                    <button onClick={() => handleCart(20)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>20s</button>
+                    <button onClick={() => handleCart(30)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>30s</button>
+                    <button onClick={() => handleCart(40)} className=' rounded-3xl  bg-amber-400 w-1/12 m-2'>40s</button>
                 </div>
             </div>
             <div>
                 <h1 className='text-2xl mt-10'>Exercise Details</h1>
                 <p className='bg-slate-200 h-10 px-2 mt-3'>Exercise Time: {total}min</p>
-                <p className='bg-slate-200 h-10 px-2 mt-3'>Break Time:  {carts}</p>
+                <p className='bg-slate-200 h-10 px-2 mt-3'>Break Time: {carts}s</p>
             </div>
             <div>
                 <button className='text-2xl mt-16 bg-rose-500 p-3 rounded-md ml-8'>Activity Completed</button>
