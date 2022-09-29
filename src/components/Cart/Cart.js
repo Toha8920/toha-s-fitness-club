@@ -43,7 +43,7 @@ const Cart = (props) => {
             </div>
             <div className='display: flex m-3 shadow-lg shadow-indigo-500/40 mt-7'>
                 <div>
-                    <h1 className='text-2xl m-4'>75<span className='text-slate-500 text-sm'>kg</span></h1>
+                    <h1 className='text-2xl m-4'>50<span className='text-slate-500 text-sm'>kg</span></h1>
                     <h3 className='text-1xl m-4 text-slate-600'>Weight</h3>
                 </div>
                 <div>

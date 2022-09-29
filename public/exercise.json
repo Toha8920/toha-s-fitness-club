@@ -15,14 +15,14 @@
     },
     {
         "id": 3,
-        "CategoryName": "Dumbbell",
+        "CategoryName": "Weight Loosing",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWLCpRg_OICdgEKml8CJEAIoGNf3CgxDa5Gg&usqp=CAU",
         "age": "20-25",
         "time": "5 min"
     },
     {
         "id": 4,
-        "CategoryName": "Unique Dumbbell ",
+        "CategoryName": "Build Biceps",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM0vcAAE2DWKsKgCyWOsTV759rvGLvqEQuMQ&usqp=CAU",
         "age": "20-25",
         "time": "6 min"
